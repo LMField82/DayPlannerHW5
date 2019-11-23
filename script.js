@@ -3,9 +3,10 @@ $(document).ready(function() {
 
     $(".saveBtn").on("click", function() {
     var value = $(this).siblings(".description").val();
+    
     var time = $(this).parent().attr("id");
     
-    localStorage.setItem(value, time);
+    localStorage.setItem(time, value);
     });
     
     function hourUpdate() {
@@ -14,7 +15,7 @@ $(document).ready(function() {
     //for each loop
     $(".time-block").each(function () {
     
-        var blockHour = parseInt($(this).attr("id").split("-")[1]);
+        var blockHour = parseInt($(this).attr("id").split("-")[0]);
     
         if(blockHour < currentHour) {
             $(this).addClass("past");
@@ -35,17 +36,17 @@ $(document).ready(function() {
     
     var interval = setInterval(hourUpdate, 15000);
     
-    $("#row-1 .description").val(localStorage.getItem("row-1"));
-    $("#row-2 .description").val(localStorage.getItem("row-2"));
-    $("#row-3 .description").val(localStorage.getItem("row-3"));
-    $("#row-4 .description").val(localStorage.getItem("row-4"));
-    $("#row-5 .description").val(localStorage.getItem("row-5"));
-    $("#row-6 .description").val(localStorage.getItem("row-6"));
-    $("#row-7 .description").val(localStorage.getItem("row-7"));
-    $("#row-8 .description").val(localStorage.getItem("row-8"));
-    $("#row-9 .description").val(localStorage.getItem("row-9"));
+    $("#9AM .description").val(localStorage.getItem("9AM"));
+    $("#10AM .description").val(localStorage.getItem("10AM"));
+    $("#11AM .description").val(localStorage.getItem("11AM"));
+    $("#12PM .description").val(localStorage.getItem("12PM"));
+    $("#1PM .description").val(localStorage.getItem("1PM"));
+    $("#2PM .description").val(localStorage.getItem("2PM"));
+    $("#3PM .description").val(localStorage.getItem("3PM"));
+    $("#4PM .description").val(localStorage.getItem("4PM"));
+    $("#5PM .description").val(localStorage.getItem("5PM"));
     
     $("#currentDay").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
-    
+
     });
     
