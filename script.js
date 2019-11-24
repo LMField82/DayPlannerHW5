@@ -40,11 +40,11 @@ $(document).ready(function() {
     $("#10AM .description").val(localStorage.getItem("10AM"));
     $("#11AM .description").val(localStorage.getItem("11AM"));
     $("#12PM .description").val(localStorage.getItem("12PM"));
-    $("#1PM .description").val(localStorage.getItem("1PM"));
-    $("#2PM .description").val(localStorage.getItem("2PM"));
-    $("#3PM .description").val(localStorage.getItem("3PM"));
-    $("#4PM .description").val(localStorage.getItem("4PM"));
-    $("#5PM .description").val(localStorage.getItem("5PM"));
+    $("#13PM .description").val(localStorage.getItem("13PM"));
+    $("#14PM .description").val(localStorage.getItem("14PM"));
+    $("#15PM .description").val(localStorage.getItem("15PM"));
+    $("#16PM .description").val(localStorage.getItem("16PM"));
+    $("#17PM .description").val(localStorage.getItem("17PM"));
     
     $("#currentDay").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
 
